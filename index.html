@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perícia Médica Judicial e Laudos Periciais | Uberlândia</title>
+<meta name="description" content="Perícia médica judicial e assistência técnica, com rigor científico e documental. Laudos periciais em Uberlândia e atendimento remoto em todo o Brasil.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rapericiasmedicas.com.br/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Perícia Médica Judicial e Laudos Periciais | Uberlândia">
+<meta property="og:description" content="Perícia médica judicial e assistência técnica, com rigor científico e documental. Laudos periciais em Uberlândia e atendimento remoto em todo o Brasil.">
+<meta property="og:url" content="https://rapericiasmedicas.com.br/">
+<meta property="og:image" content="https://rapericiasmedicas.com.br/assets/og-image.png">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "RA Consultoria Médica e Pericial",
+  "alternateName": "RA Perícias Médicas",
+  "description": "Perícia médica judicial e assistência técnica em processos judiciais e administrativos, com laudos periciais e pareceres técnicos fundamentados em evidências científicas.",
+  "areaServed": [
+    { "@type": "City", "name": "Uberlândia" },
+    { "@type": "Country", "name": "Brasil" }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Uberlândia",
+    "addressRegion": "MG",
+    "addressCountry": "BR"
+  },
+  "url": "https://rapericiasmedicas.com.br/",
+  "founder": {
+    "@type": "Person",
+    "honorificPrefix": "Dra.",
+    "name": "Rafaela Andrade Nascimento",
+    "sameAs": "http://lattes.cnpq.br/8043422263115795"
+  }
+}
+</script>
+
+<style>
+  :root {
+    --navy-edge: #050E1D;
+    --navy: #0D1B2A;
+    --navy-mid: #152535;
+    --navy-light: #1E3A52;
+    --blue: #4A78A8;
+    --blue-btn: #43709D;
+    --blue-text: #6690BD;
+    --silver: #B8BCC2;
+    --ink: #F2F4F6;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--navy);
+    color: var(--silver);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  h1, h2, h3, .brand-wordmark {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--ink);
+    font-weight: normal;
+    margin: 0;
+  }
+  a { color: var(--blue-text); text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 88px 0; }
+  .eyebrow {
+    font-family: Georgia, serif;
+    font-size: 0.8rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--blue-text);
+    margin-bottom: 14px;
+  }
+  .section-title { font-size: 1.9rem; margin-bottom: 16px; }
+  .section-lede { max-width: 640px; color: var(--silver); font-size: 1.02rem; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--blue-btn);
+    color: var(--ink);
+    padding: 14px 28px;
+    border-radius: 3px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .btn:hover { background: #5c8bbd; transform: translateY(-1px); }
+  .btn-ghost {
+    background: transparent;
+    border: 1px solid var(--navy-light);
+    color: var(--ink);
+  }
+  .btn-ghost:hover { background: var(--navy-mid); }
+
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(13, 27, 42, 0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--navy-light);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+  }
+  .nav-brand { display: flex; align-items: center; gap: 10px; }
+  .nav-brand img { width: 42px; }
+  .nav-brand span {
+    font-family: Georgia, serif;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: var(--ink);
+  }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { color: var(--silver); font-size: 0.92rem; }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta { font-size: 0.85rem; padding: 10px 20px; }
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--navy-light);
+    color: var(--ink);
+    padding: 8px 12px;
+    border-radius: 3px;
+    font-size: 1.1rem;
+  }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    padding: 76px 0 0 0;
+    background: radial-gradient(ellipse at 78% 10%, var(--navy) 0%, var(--navy-edge) 78%);
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -25%; right: -10%;
+    width: 60%; height: 140%;
+    background: linear-gradient(135deg, var(--navy-mid), transparent 60%);
+    transform: rotate(-18deg);
+    opacity: 0.5;
+  }
+  .hero-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.15fr 0.95fr;
+    gap: 52px;
+    align-items: center;
+  }
+
+  /* Brand lockup: monogram + live descriptor text (not baked into the raster) */
+  .brand-lockup { display: flex; align-items: center; gap: 20px; margin-bottom: 34px; position: relative; }
+  .brand-lockup::before {
+    content: "";
+    position: absolute;
+    left: -26px; top: 50%;
+    width: 132px; height: 132px;
+    transform: translateY(-50%);
+    background: radial-gradient(circle, rgba(74,120,168,0.30) 0%, rgba(74,120,168,0.10) 55%, transparent 75%);
+    filter: blur(2px);
+    pointer-events: none;
+  }
+  .brand-lockup img {
+    position: relative;
+    width: 88px;
+    filter: drop-shadow(0 6px 18px rgba(5, 14, 29, 0.55));
+  }
+  .brand-descriptor { position: relative; }
+  .brand-name {
+    font-family: Georgia, serif;
+    font-size: 1.08rem;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: var(--silver);
+  }
+  .brand-name b { color: var(--blue); font-weight: normal; }
+  .brand-subtitle {
+    font-family: Georgia, serif;
+    font-size: 0.66rem;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--blue-text);
+    margin-top: 4px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    line-height: 1.25;
+    max-width: 620px;
+    margin: 0 0 20px 0;
+  }
+  .hero-content h1 em { color: var(--blue); font-style: normal; }
+  .hero-content p.subhead {
+    max-width: 540px;
+    margin: 0 0 34px 0;
+    font-size: 1.05rem;
+    color: var(--silver);
+  }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
+  .trust-strip {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    padding-top: 26px;
+    margin-top: 4px;
+    border-top: 1px solid var(--navy-light);
+    padding-bottom: 64px;
+  }
+  .trust-item {
+    font-family: Georgia, serif;
+    font-size: 0.8rem;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    color: var(--silver);
+    padding-left: 18px;
+    position: relative;
+    line-height: 1.4;
+  }
+  .trust-item::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 50%;
+    width: 9px; height: 1px;
+    background: var(--blue);
+    transform: translateY(-50%);
+  }
+
+  /* Hero portrait: signature ribbon-curve edge, echoing the mark that connects R and A */
+  .hero-portrait { position: relative; align-self: stretch; display: flex; align-items: flex-end; }
+  .portrait-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    clip-path: url(#ribbonClipHero);
+    box-shadow: -18px 0 50px rgba(0,0,0,0.35);
+  }
+  .portrait-frame img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: 50% 12%;
+  }
+  .portrait-frame::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 55%, rgba(5,14,29,0.55) 100%),
+                linear-gradient(90deg, rgba(5,14,29,0.28) 0%, transparent 22%);
+    pointer-events: none;
+  }
+
+  /* Divider echoing the ribbon */
+  .ribbon-divider { height: 34px; position: relative; overflow: hidden; }
+  .ribbon-divider svg { width: 100%; height: 100%; display: block; }
+
+  /* Faixa de números — credenciais em destaque */
+  .stats-strip { background: var(--navy-mid); border-top: 1px solid var(--navy-light); border-bottom: 1px solid var(--navy-light); padding: 58px 0; }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .stat { padding: 0 30px; border-left: 1px solid var(--navy-light); }
+  .stat:first-child { padding-left: 0; border-left: none; }
+  .stat-num {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 1.9rem;
+    color: var(--ink);
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .stat-num::before { content: ""; display: block; width: 24px; height: 2px; background: var(--blue); margin-bottom: 16px; }
+  .stat-label { display: block; font-size: 0.78rem; letter-spacing: 0.3px; line-height: 1.55; color: var(--silver); max-width: 220px; }
+
+  /* Sobre */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .lattes-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--blue-text);
+    border-bottom: 1px solid var(--navy-light);
+    padding-bottom: 3px;
+    margin-top: 8px;
+  }
+  .lattes-link:hover { color: var(--ink); border-color: var(--blue); }
+
+  .about-photo { position: relative; }
+  .about-photo-frame {
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--navy-light);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+    aspect-ratio: 3 / 4;
+  }
+  .about-photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; }
+  .about-caption-card {
+    position: relative;
+    margin: -64px 22px 0 22px;
+    background: var(--navy);
+    border: 1px solid var(--navy-light);
+    border-radius: 4px;
+    padding: 22px 24px 20px 24px;
+    z-index: 1;
+  }
+  .about-caption-card .name { font-size: 1.15rem; margin-bottom: 4px; }
+  .about-caption-card .creds { font-size: 0.78rem; color: var(--blue-text); margin-bottom: 18px; }
+  .about-caption-card ul { list-style: none; margin: 0; padding: 0; font-size: 0.85rem; color: var(--silver); }
+  .about-caption-card ul li { margin-bottom: 8px; padding-left: 16px; position: relative; }
+  .about-caption-card ul li::before { content: "—"; position: absolute; left: 0; color: var(--blue-text); }
+
+  /* Diferenciais */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 40px;
+  }
+  .card {
+    background: var(--navy-mid);
+    border: 1px solid var(--navy-light);
+    border-radius: 4px;
+    padding: 28px 26px;
+  }
+  .card h3 { font-size: 1.08rem; margin-bottom: 10px; }
+  .card p { font-size: 0.92rem; color: var(--silver); margin: 0; }
+  .card .num {
+    font-family: Georgia, serif;
+    font-size: 0.78rem;
+    color: var(--blue-text);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  /* Serviços */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 40px;
+  }
+  .service-card {
+    background: var(--navy-mid);
+    border: 1px solid var(--navy-light);
+    border-radius: 4px;
+    padding: 30px 26px;
+    display: flex;
+    flex-direction: column;
+  }
+  .service-card h3 { font-size: 1.1rem; margin-bottom: 12px; }
+  .service-card p { font-size: 0.9rem; color: var(--silver); flex: 1; }
+  .service-card .meta {
+    font-size: 0.78rem;
+    color: var(--blue-text);
+    font-style: italic;
+    margin: 14px 0 18px 0;
+  }
+  .service-card .btn-ghost { align-self: flex-start; font-size: 0.82rem; padding: 10px 18px; }
+
+  /* Como funciona */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-top: 40px;
+    counter-reset: step;
+  }
+  .step { position: relative; padding-left: 4px; }
+  .step .step-num {
+    font-family: Georgia, serif;
+    font-size: 2.2rem;
+    color: var(--navy-light);
+    display: block;
+    margin-bottom: 10px;
+  }
+  .step h3 { font-size: 1rem; margin-bottom: 8px; }
+  .step p { font-size: 0.86rem; color: var(--silver); margin: 0; }
+
+  /* Documentos + Área de atuação */
+  .split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+  }
+  .split-col h3 {
+    font-size: 1.05rem;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--navy-light);
+  }
+  .split-col ul { list-style: none; margin: 0; padding: 0; font-size: 0.92rem; }
+  .split-col ul li {
+    padding: 10px 0 10px 20px;
+    border-bottom: 1px solid var(--navy-mid);
+    position: relative;
+  }
+  .split-col ul li::before { content: "•"; color: var(--blue-text); position: absolute; left: 0; }
+
+  /* FAQ */
+  .faq-item {
+    border-bottom: 1px solid var(--navy-light);
+  }
+  .faq-item summary {
+    padding: 20px 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--ink);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: "+";
+    font-family: Georgia, serif;
+    font-size: 1.3rem;
+    color: var(--blue-text);
+    margin-left: 16px;
+  }
+  .faq-item[open] summary::after { content: "–"; }
+  .faq-item p { padding: 0 4px 20px 4px; font-size: 0.92rem; color: var(--silver); margin: 0; }
+
+  /* CTA final */
+  .cta-final {
+    text-align: center;
+    background: var(--navy-mid);
+    border-top: 1px solid var(--navy-light);
+    border-bottom: 1px solid var(--navy-light);
+  }
+  .cta-final .slogan {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--ink);
+    margin-bottom: 26px;
+  }
+
+  /* Footer */
+  footer { padding: 50px 0 30px 0; }
+  .footer-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--navy-mid);
+  }
+  .footer-brand { display: flex; align-items: center; gap: 12px; }
+  .footer-brand img { width: 50px; }
+  .footer-brand .name { font-family: Georgia, serif; color: var(--ink); font-size: 1rem; }
+  .footer-brand .tag { font-size: 0.78rem; color: var(--blue-text); letter-spacing: 1px; text-transform: uppercase; }
+  .footer-links { display: flex; gap: 40px; flex-wrap: wrap; }
+  .footer-links div { font-size: 0.85rem; }
+  .footer-links h4 { color: var(--ink); font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; margin: 0 0 10px 0; font-family: Georgia, serif; font-weight: normal; }
+  .footer-links a { display: block; color: var(--silver); margin-bottom: 7px; }
+  .footer-links a:hover { color: var(--ink); }
+  .footer-bottom {
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.76rem;
+    color: var(--navy-light);
+  }
+  .footer-bottom p { margin: 0; max-width: 640px; }
+
+  @media (max-width: 860px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: inline-block; }
+    .hero { padding-top: 44px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-portrait { order: -1; }
+    .portrait-frame { aspect-ratio: 5 / 4; clip-path: none; border-radius: 6px; box-shadow: 0 20px 50px rgba(0,0,0,0.35); }
+    .portrait-frame::after { background: linear-gradient(180deg, transparent 60%, rgba(5,14,29,0.55) 100%); }
+    .hero-content h1 { font-size: 1.9rem; max-width: 100%; }
+    .hero-content p.subhead { max-width: 100%; }
+    .about-grid, .card-grid, .services-grid, .steps, .split-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .stat { border-left: none; padding: 22px 0 0 0; margin-top: 22px; border-top: 1px solid var(--navy-light); }
+    .stat:first-child { border-top: none; margin-top: 0; padding-top: 0; }
+    section { padding: 60px 0; }
+    .about-photo { margin-top: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <clipPath id="ribbonClipHero" clipPathUnits="objectBoundingBox">
+    <path d="M0.17,0 C0.055,0.14 0.02,0.27 0.065,0.40 C0.11,0.50 0.16,0.55 0.15,0.63 C0.14,0.72 0.05,0.78 0.03,0.87 C0.02,0.93 0.05,0.97 0.12,1 L1,1 L1,0 Z"/>
+  </clipPath>
+</svg>
+
+<header>
+  <div class="wrap nav-inner">
+    <div class="nav-brand">
+      <img src="assets/logo-monogram-transparent.png" alt="RA Consultoria Médica e Pericial">
+      <span>RA CONSULTORIA<br>MÉDICA E PERICIAL</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Como Funciona</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn nav-cta" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20uma%20per%C3%ADcia%20m%C3%A9dica." target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-content">
+      <div class="brand-lockup">
+        <img src="assets/logo-monogram-transparent.png" alt="RA Consultoria Médica e Pericial">
+        <div class="brand-descriptor">
+          <div class="brand-name">Consultoria <b>Médica</b> e Pericial</div>
+          <div class="brand-subtitle">Assistência Técnica · Pareceres · Assessoria Médica</div>
+        </div>
+      </div>
+      <h1>Laudos periciais com <em>precisão cirúrgica</em></h1>
+      <p class="subhead">Pareceres técnicos e laudos periciais com rigor científico e documental, para advogados, magistrados, empresas e órgãos públicos — em Uberlândia e em todo o Brasil.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20uma%20per%C3%ADcia%20m%C3%A9dica." target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
+      </div>
+      <div class="trust-strip">
+        <span class="trust-item">CRM-MG 65270</span>
+        <span class="trust-item">RQE Cirurgia Geral 41163</span>
+        <span class="trust-item">RQE Cirurgia do Trauma 56662</span>
+      </div>
+    </div>
+    <div class="hero-portrait">
+      <div class="portrait-frame">
+        <img src="assets/foto-rafaela-hero.jpg" alt="Dra. Rafaela Andrade Nascimento, médica responsável técnica da RA Consultoria Médica e Pericial">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-strip">
+  <div class="wrap stats-grid">
+    <div class="stat">
+      <span class="stat-num">2011</span>
+      <span class="stat-label">Início da trajetória em medicina legal — anterior à própria formalização como perita</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">2</span>
+      <span class="stat-label">Títulos de especialista (RQE) — Cirurgia Geral e Cirurgia do Trauma</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">2025</span>
+      <span class="stat-label">Chefe da Unidade de Clínica Cirúrgica — HC-UFU/Ebserh, desde</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">Prazo por escrito</span>
+      <span class="stat-label">Definido no ato de assinatura do contrato</span>
+    </div>
+  </div>
+</section>
+
+<div class="ribbon-divider">
+  <svg viewBox="0 0 1200 34" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,10 C 300,34 500,-6 700,14 S 1000,30 1200,8" stroke="#4A78A8" stroke-width="1.4" fill="none" opacity="0.55"/>
+  </svg>
+</div>
+
+<section id="sobre">
+  <div class="wrap about-grid">
+    <div>
+      <div class="eyebrow">Quem Somos</div>
+      <h2 class="section-title">Precisão cirúrgica aplicada à prova técnica</h2>
+      <p class="section-lede" style="max-width:100%; margin-bottom:20px;">
+        A RA Consultoria Médica e Pericial presta serviços especializados em perícia médica judicial e
+        assistência técnica em processos judiciais e administrativos. Laudos periciais e pareceres técnicos
+        fundamentados em evidências científicas, rigor técnico e princípios éticos da prática médica —
+        sem promessa de resultado, com compromisso de fundamentação.
+      </p>
+      <p class="section-lede" style="max-width:100%;">
+        A responsável técnica reúne formação cirúrgica (trauma e urgência/emergência) e formação específica
+        em perícias médicas, com trajetória em medicina legal que remonta a 2011 — anterior à própria
+        formalização como perita — incluindo curso de Tanatologia Forense, participação em Jornada Acadêmica
+        de Medicina Legal e trabalhos científicos sobre investigação de lesões corporais e óbitos suspeitos.
+      </p>
+      <a class="lattes-link" href="http://lattes.cnpq.br/8043422263115795" target="_blank" rel="noopener">Ver currículo completo na Plataforma Lattes →</a>
+    </div>
+    <div class="about-photo">
+      <div class="about-photo-frame">
+        <img src="assets/foto-rafaela-sobre.jpg" alt="Dra. Rafaela Andrade Nascimento, responsável técnica da RA Consultoria Médica e Pericial">
+      </div>
+      <div class="about-caption-card">
+        <div class="name">Dra. Rafaela Andrade Nascimento</div>
+        <div class="creds">CRM-MG 65270 · RQE Cirurgia Geral 41163 · RQE Cirurgia do Trauma 56662</div>
+        <ul>
+          <li>Chefe da Unidade de Clínica Cirúrgica — HC-UFU/Ebserh</li>
+          <li>Preceptora da Residência Médica de Cirurgia Geral — HC-UFU/UFU</li>
+          <li>Médica socorrista — SAMU/CISTRI (2019–2023), urgência e trauma em cena</li>
+          <li>Formação complementar em Perícias Médicas — IFH</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="diferenciais" style="background:var(--navy-edge);">
+  <div class="wrap">
+    <div class="eyebrow">Diferenciais</div>
+    <h2 class="section-title">O que sustenta um laudo diante do contraditório</h2>
+    <p class="section-lede">Elementos que fundamentam a credibilidade técnica do trabalho pericial.</p>
+    <div class="card-grid">
+      <div class="card">
+        <span class="num">01</span>
+        <h3>Dupla base técnica</h3>
+        <p>Formação cirúrgica em trauma e urgência/emergência somada à formação específica em perícias médicas — leitura clínica e jurídica do mesmo caso.</p>
+      </div>
+      <div class="card">
+        <span class="num">02</span>
+        <h3>Trajetória em medicina legal desde 2011</h3>
+        <p>Tanatologia Forense, Jornada Acadêmica de Medicina Legal e trabalhos científicos sobre investigação de lesões corporais e óbitos suspeitos — anteriores à própria formalização como perita.</p>
+      </div>
+      <div class="card">
+        <span class="num">03</span>
+        <h3>Liderança e docência hospitalar</h3>
+        <p>Chefia de unidade cirúrgica e preceptoria de residência médica no Hospital de Clínicas de Uberlândia (HC-UFU) — rotina de fundamentar decisões técnicas para terceiros.</p>
+      </div>
+      <div class="card">
+        <span class="num">04</span>
+        <h3>Rigor documental e tratamento de dados</h3>
+        <p>Laudos em formato ABNT, assinatura digital, prazo definido, e formação específica em proteção de dados pessoais (LGPD) para documentação processual sensível.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="wrap">
+    <div class="eyebrow">Serviços</div>
+    <h2 class="section-title">Laudos periciais e assistência técnica</h2>
+    <p class="section-lede">Escopo e prazo definidos antes do início. Condições comerciais tratadas em contato pessoal.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Análise de Viabilidade Técnica</h3>
+        <p>Avaliação preliminar da documentação para verificar se o caso tem fundamento técnico-médico suficiente antes de um laudo completo.</p>
+        <div class="meta">Documento PDF assinado digitalmente, formato ABNT</div>
+        <a class="btn btn-ghost" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20an%C3%A1lise%20de%20viabilidade%20t%C3%A9cnica." target="_blank" rel="noopener">Consultar condições</a>
+      </div>
+      <div class="service-card">
+        <h3>Laudo Médico Pericial</h3>
+        <p>Análise técnica completa da documentação e demais elementos necessários à avaliação pericial, com possibilidade de perícia presencial.</p>
+        <div class="meta">Documento PDF assinado digitalmente, formato ABNT, 5 a 15 páginas</div>
+        <a class="btn btn-ghost" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20laudo%20m%C3%A9dico%20pericial." target="_blank" rel="noopener">Consultar condições</a>
+      </div>
+      <div class="service-card">
+        <h3>Pacote Análise + Laudo</h3>
+        <p>As duas etapas combinadas — análise de viabilidade seguida do laudo médico pericial completo — com condição comercial diferenciada.</p>
+        <div class="meta">Os dois documentos PDF assinados digitalmente</div>
+        <a class="btn btn-ghost" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20pacote%20an%C3%A1lise%20%2B%20laudo." target="_blank" rel="noopener">Consultar condições</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como-funciona" style="background:var(--navy-edge);">
+  <div class="wrap">
+    <div class="eyebrow">Como Funciona</div>
+    <h2 class="section-title">Do primeiro contato à entrega do laudo</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <h3>Documentação</h3>
+        <p>Envio dos autos do processo e documentos de suporte via WhatsApp ou e-mail.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <h3>Análise técnica</h3>
+        <p>Avaliação da documentação e, quando necessário, agendamento de perícia presencial.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <h3>Elaboração</h3>
+        <p>Redação do laudo ou parecer, fundamentado em evidências científicas e formato ABNT.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">04</span>
+        <h3>Entrega</h3>
+        <p>Documento assinado digitalmente, dentro do prazo definido por escrito no ato da assinatura do contrato.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split-grid">
+    <div class="split-col">
+      <h3>Documentos para Início</h3>
+      <ul>
+        <li>Autos do processo</li>
+        <li>Documento de identificação com foto</li>
+        <li>Documentos de suporte aos fatos relatados</li>
+      </ul>
+    </div>
+    <div class="split-col">
+      <h3>Área de Atuação</h3>
+      <ul>
+        <li>Atendimento presencial em todo território nacional, incluindo perícia in loco quando necessária</li>
+        <li>Atendimento remoto em todo território nacional</li>
+        <li>Perícias médicas judiciais e administrativas</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:var(--navy-edge);">
+  <div class="wrap" style="max-width:800px;">
+    <div class="eyebrow">Perguntas Frequentes</div>
+    <h2 class="section-title" style="margin-bottom:34px;">Dúvidas comuns antes de solicitar</h2>
+
+    <details class="faq-item">
+      <summary>Qual o valor dos serviços?</summary>
+      <p>As condições comerciais variam conforme a complexidade do caso, a extensão da documentação e a necessidade de deslocamento para perícia presencial — por isso cada caso é tratado de forma individual, com todas as condições apresentadas por escrito antes da assinatura do contrato.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Qual é o prazo de entrega?</summary>
+      <p>O prazo é definido por escrito no ato da assinatura do contrato, considerando a complexidade do caso e a extensão da documentação. Há opção de urgência mediante sobretaxa, a combinar conforme o caso.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Quais documentos preciso enviar?</summary>
+      <p>Autos do processo, documento de identificação com foto e demais documentos de suporte aos fatos relatados. A lista completa é confirmada no primeiro contato, conforme o serviço solicitado.</p>
+    </details>
+    <details class="faq-item">
+      <summary>O atendimento é só em Uberlândia?</summary>
+      <p>O atendimento presencial — incluindo perícia in loco quando necessária — é feito em todo território nacional.</p>
+    </details>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="wrap">
+    <div class="slogan">Para tirar dúvidas ou solicitar um orçamento, fale diretamente pelo WhatsApp.</div>
+    <a class="btn" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20uma%20per%C3%ADcia%20m%C3%A9dica." target="_blank" rel="noopener">Falar no WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo-monogram-transparent.png" alt="RA Consultoria Médica e Pericial">
+        <div>
+          <div class="name">RA Consultoria Médica e Pericial</div>
+          <div class="tag">Assistência Técnica · Pareceres · Laudos Periciais</div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Navegação</h4>
+          <a href="#sobre">Sobre</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#como-funciona">Como Funciona</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <a href="https://wa.me/5534997370255" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://rapericiasmedicas.com.br">rapericiasmedicas.com.br</a>
+          <a href="http://lattes.cnpq.br/8043422263115795" target="_blank" rel="noopener">Currículo Lattes</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Este site tem finalidade informativa institucional e não constitui consulta jurídica, atendimento médico assistencial ou garantia de resultado processual.</p>
+      <p>&copy; 2026 RA Consultoria Médica e Pericial</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Menu mobile
+  document.querySelector('.nav-toggle')?.addEventListener('click', function () {
+    var links = document.querySelector('.nav-links');
+    var open = links.style.display === 'flex';
+    links.style.display = open ? 'none' : 'flex';
+    links.style.flexDirection = 'column';
+    links.style.position = 'absolute';
+    links.style.top = '100%';
+    links.style.left = '0';
+    links.style.right = '0';
+    links.style.background = '#0D1B2A';
+    links.style.padding = '20px 24px';
+    links.style.borderBottom = '1px solid #1E3A52';
+  });
+</script>
+
+</body>
+</html>
