@@ -469,7 +469,6 @@
     padding: 28px 26px;
   }
   .card h3 { font-size: 1.08rem; margin-bottom: 10px; }
-  .card p { font-size: 0.92rem; color: var(--silver); margin: 0; }
   .card .num {
     font-family: Georgia, serif;
     font-size: 0.78rem;
@@ -504,13 +503,7 @@
     flex-direction: column;
   }
   .service-card h3 { font-size: 1.1rem; margin-bottom: 12px; }
-  .service-card p { font-size: 0.9rem; color: var(--silver); flex: 1; }
-  .service-card .meta {
-    font-size: 0.78rem;
-    color: var(--blue-text);
-    font-style: italic;
-    margin: 14px 0 18px 0;
-  }
+  .service-card p { font-size: 0.9rem; color: var(--silver); flex: 1; margin: 0 0 22px 0; }
   .service-card .btn-ghost { align-self: flex-start; font-size: 0.82rem; padding: 10px 18px; }
 
   /* Como funciona */
@@ -538,7 +531,6 @@
     background: var(--blue);
     margin: 16px auto 0 auto;
   }
-  .steps-head .section-lede { max-width: 460px; margin: 18px auto 0 auto; }
   .steps {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -755,7 +747,7 @@
           <ul>
             <li><strong>Cível</strong><span class="tab-aside-desc">Danos materiais ou morais decorrentes de acidentes de trânsito, securitárias, casos de erro médico e ações de interdição ou curatela</span></li>
             <li><strong>Trabalhista</strong><span class="tab-aside-desc">Nexo causal, LER/DORT ou perda da capacidade para o trabalho</span></li>
-            <li><strong>Previdenciário</strong><span class="tab-aside-desc">INSS</span></li>
+            <li><strong>Previdenciário</strong><span class="tab-aside-desc">INSS, avaliação de incapacidade laboral e concessão de benefícios</span></li>
             <li><strong>Criminal</strong><span class="tab-aside-desc">Lesões corporais, violência sexual, causa mortis e análise de vestígios</span></li>
           </ul>
         </div>
@@ -846,6 +838,7 @@
         <ul>
           <li>Chefe da Unidade de Clínica Cirúrgica — HC-UFU/HUBRASIL</li>
           <li>Preceptora da Residência Médica de Cirurgia Geral — HC-UFU e HMMDOLC</li>
+          <li>Atuação em Comitês de Ética Médica — HC-UFU e HMMDOLC</li>
           <li>Formação complementar em Perícias Médicas — IFH</li>
         </ul>
       </div>
@@ -862,10 +855,23 @@
       <div class="card">
         <span class="num">01</span>
         <h3>Dupla base técnica</h3>
-        <p>Formação em cirurgia geral e trauma somada à formação específica em perícias médicas — leitura clínica e jurídica do mesmo caso.</p>
+        <ul class="card-list">
+          <li>Formação em Cirurgia Geral e Cirurgia do Trauma</li>
+          <li>Formação específica em Perícias Médicas</li>
+          <li>Leitura clínica e jurídica do mesmo caso</li>
+        </ul>
       </div>
       <div class="card">
         <span class="num">02</span>
+        <h3>Liderança institucional e ética médica</h3>
+        <ul class="card-list">
+          <li>Chefia de unidade cirúrgica, com atuação direta em quesitações e análises detalhadas de prontuários</li>
+          <li>Presidência do Comitê de Ética Médica — HC-UFU (2022-2024)</li>
+          <li>Membro do Comitê de Ética Médica — HMMDOLC (desde 2025)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="num">03</span>
         <h3>Trajetória em medicina legal</h3>
         <ul class="card-list">
           <li>Pós Graduação em Tanatologia</li>
@@ -874,15 +880,10 @@
         </ul>
       </div>
       <div class="card">
-        <span class="num">03</span>
-        <h3>Liderança e gestão hospitalar</h3>
-        <p>Atuação direta em formulação e respostas a quesitações e análises detalhadas de prontuários.</p>
-      </div>
-      <div class="card">
         <span class="num">04</span>
         <h3>Rigor documental e linguagem compreensível</h3>
         <ul class="card-list">
-          <li>Laudos formatados e com assinatura digital, prazo definido na assinatura do contrato</li>
+          <li>Laudos construídos com precisão cirúrgica</li>
           <li>Respeito à Lei de Proteção de Dados Pessoais (LGPD)</li>
           <li>Tradução de terminologia médica para linguagem clara e acessível ao público geral</li>
         </ul>
@@ -900,13 +901,11 @@
       <div class="service-card">
         <h3>Análise de Viabilidade Técnica</h3>
         <p>Avaliação preliminar da documentação para verificar se o caso do reclamante tem fundamento técnico-médico.</p>
-        <div class="meta">Documento PDF assinado digitalmente, formato ABNT</div>
         <a class="btn btn-ghost" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20an%C3%A1lise%20de%20viabilidade%20t%C3%A9cnica." target="_blank" rel="noopener">Consultar condições</a>
       </div>
       <div class="service-card">
         <h3>Laudo Médico / Parecer Técnico</h3>
         <p>Análise técnica completa da documentação e demais elementos necessários à avaliação pericial e acompanhamento dos atos processuais do início ao fim.</p>
-        <div class="meta">Documento PDF assinado digitalmente, formato ABNT, 5 a 15 páginas</div>
         <a class="btn btn-ghost" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20laudo%20m%C3%A9dico%20pericial." target="_blank" rel="noopener">Consultar condições</a>
       </div>
     </div>
@@ -918,7 +917,6 @@
     <div class="steps-head">
       <div class="section-badge">Como Funciona</div>
       <h2 class="section-title">Do primeiro contato à entrega do laudo</h2>
-      <p class="section-lede">5 etapas, com prazo definido por escrito.</p>
     </div>
     <div class="steps">
       <div class="step">
@@ -944,7 +942,7 @@
       <div class="step">
         <span class="step-num">05</span>
         <h3>Acompanhamento</h3>
-        <p>Entrega do documento e acompanhamento dos atos processuais, dentro do prazo combinado.</p>
+        <p>Entrega da documentação e acompanhamento dos atos processuais, dentro do prazo acordado.</p>
       </div>
     </div>
   </div>
