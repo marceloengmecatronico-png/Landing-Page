@@ -157,7 +157,7 @@
     padding: 14px 0;
   }
   .nav-brand { display: flex; align-items: center; gap: 10px; }
-  .nav-brand img { width: 42px; }
+  .nav-brand img { width: 42px; height: auto; }
   .nav-brand span {
     font-family: Georgia, serif;
     font-size: 0.85rem;
@@ -219,6 +219,7 @@
   .brand-lockup img {
     position: relative;
     width: 88px;
+    height: auto;
     filter: drop-shadow(0 6px 18px rgba(5, 14, 29, 0.55));
   }
   .brand-descriptor { position: relative; }
@@ -618,7 +619,7 @@
     border-bottom: 1px solid var(--navy-mid);
   }
   .footer-brand { display: flex; align-items: center; gap: 12px; }
-  .footer-brand img { width: 50px; }
+  .footer-brand img { width: 50px; height: auto; }
   .footer-brand .name { font-family: Georgia, serif; color: var(--ink); font-size: 1rem; }
   .footer-brand .tag { font-size: 0.78rem; color: var(--blue-text); letter-spacing: 1px; text-transform: uppercase; }
   .footer-links { display: flex; gap: 40px; flex-wrap: wrap; }
@@ -673,7 +674,7 @@
 <header>
   <div class="wrap nav-inner">
     <div class="nav-brand">
-      <img src="assets/logo-monogram-transparent.png" alt="RA Consultoria Médica e Pericial">
+      <img src="assets/logo-monogram-transparent.png" width="300" height="261" alt="RA Consultoria Médica e Pericial">
       <span>RA CONSULTORIA<br>MÉDICA E PERICIAL</span>
     </div>
     <nav class="nav-links">
@@ -692,7 +693,7 @@
   <div class="wrap hero-grid">
     <div class="hero-content">
       <div class="brand-lockup">
-        <img src="assets/logo-monogram-transparent.png" alt="RA Consultoria Médica e Pericial">
+        <img src="assets/logo-monogram-transparent.png" width="300" height="261" alt="RA Consultoria Médica e Pericial">
         <div class="brand-descriptor">
           <div class="brand-name">Consultoria <b>Médica</b> e Pericial</div>
           <div class="brand-subtitle">Assistência Técnica · Pareceres · Assessoria Médica</div>
@@ -713,7 +714,7 @@
     </div>
     <div class="hero-portrait">
       <div class="portrait-frame">
-        <img src="assets/foto-rafaela-hero.jpg" alt="Dra. Rafaela Andrade Nascimento, médica responsável técnica da RA Consultoria Médica e Pericial" fetchpriority="high" decoding="async">
+        <img src="assets/foto-rafaela-hero.jpg" srcset="assets/foto-rafaela-hero-900.jpg 900w, assets/foto-rafaela-hero.jpg 1400w" sizes="(max-width: 860px) 100vw, 461px" width="1400" height="2100" alt="Dra. Rafaela Andrade Nascimento, médica responsável técnica da RA Consultoria Médica e Pericial" fetchpriority="high" decoding="async">
       </div>
     </div>
   </div>
@@ -830,7 +831,7 @@
     </div>
     <div class="about-photo">
       <div class="about-photo-frame">
-        <img src="assets/foto-rafaela-sobre.jpg" alt="Dra. Rafaela Andrade Nascimento, responsável técnica da RA Consultoria Médica e Pericial" loading="lazy" decoding="async">
+        <img src="assets/foto-rafaela-sobre.jpg" srcset="assets/foto-rafaela-sobre-900.jpg 900w, assets/foto-rafaela-sobre.jpg 1400w" sizes="(max-width: 860px) 100vw, 481px" width="1400" height="2100" alt="Dra. Rafaela Andrade Nascimento, responsável técnica da RA Consultoria Médica e Pericial" loading="lazy" decoding="async">
       </div>
       <div class="about-caption-card">
         <div class="name">Dra. Rafaela Andrade Nascimento</div>
@@ -983,7 +984,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/logo-monogram-transparent.png" alt="RA Consultoria Médica e Pericial">
+        <img src="assets/logo-monogram-transparent.png" width="300" height="261" alt="RA Consultoria Médica e Pericial">
         <div>
           <div class="name">RA Consultoria Médica e Pericial</div>
           <div class="tag">Assistência Técnica · Pareceres · Laudos Periciais</div>
