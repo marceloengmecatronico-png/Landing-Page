@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -118,6 +119,26 @@
     color: var(--ink);
   }
   .btn-ghost:hover { background: var(--navy-mid); }
+  .btn-whatsapp { background: #075E54; }
+  .btn-whatsapp:hover { background: #0C8C77; }
+
+  .whatsapp-float {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #075E54;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 22px rgba(5,14,29,0.5);
+    z-index: 200;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .whatsapp-float:hover { background: #0C8C77; transform: translateY(-2px); }
+  .whatsapp-float svg { width: 28px; height: 28px; display: block; }
 
   /* Header */
   header {
@@ -146,6 +167,7 @@
   .nav-links a { color: var(--silver); font-size: 0.92rem; }
   .nav-links a:hover { color: var(--ink); }
   .nav-cta { font-size: 0.85rem; padding: 10px 20px; }
+  .nav-cta.btn { color: var(--ink); }
   .nav-toggle {
     display: none;
     background: none;
@@ -230,6 +252,17 @@
     color: var(--silver);
   }
   .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
+  .hero-ctas .btn { animation: heroCtaIn 0.5s ease both; }
+  .hero-ctas .btn:nth-child(1) { animation-delay: 0.1s; }
+  .hero-ctas .btn:nth-child(2) { animation-delay: 0.45s; }
+  .hero-ctas .btn:nth-child(3) { animation-delay: 0.8s; }
+  @keyframes heroCtaIn {
+    from { opacity: 0; transform: translateX(-32px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-ctas .btn { animation: none; }
+  }
   .trust-strip {
     display: flex;
     flex-direction: column;
@@ -301,6 +334,83 @@
   .stat-num::before { content: ""; display: block; width: 24px; height: 2px; background: var(--blue); margin-bottom: 16px; }
   .stat-label { display: block; font-size: 0.78rem; letter-spacing: 0.3px; line-height: 1.55; color: var(--silver); max-width: 220px; }
 
+  /* Para quem — tabs */
+  .audience-tabs {
+    display: flex;
+    max-width: 480px;
+    margin: 0 0 40px 0;
+    background: var(--navy-mid);
+    border: 1px solid var(--navy-light);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .tab-btn {
+    flex: 1;
+    padding: 14px 12px;
+    background: transparent;
+    border: none;
+    color: var(--silver);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.88rem;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .tab-btn:hover { color: var(--ink); }
+  .tab-btn.active { background: var(--blue-btn); color: var(--ink); }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+  .tab-panel-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 44px;
+    background: var(--navy-mid);
+    border: 1px solid var(--navy-light);
+    border-radius: 4px;
+    padding: 40px;
+  }
+  .tab-panel-grid h3 { font-size: 1.25rem; margin-bottom: 14px; }
+  .tab-panel-grid > div:first-child > p { font-size: 0.94rem; color: var(--silver); margin: 0 0 22px 0; }
+  .tab-check-list { list-style: none; margin: 0 0 26px 0; padding: 0; font-size: 0.88rem; }
+  .tab-check-list li {
+    padding: 9px 0 9px 20px;
+    border-bottom: 1px solid var(--navy-light);
+    position: relative;
+    color: var(--silver);
+  }
+  .tab-check-list li:last-child { border-bottom: none; }
+  .tab-check-list li::before { content: "—"; color: var(--blue-text); position: absolute; left: 0; }
+  .tab-aside {
+    background: var(--navy-edge);
+    border: 1px solid var(--navy-light);
+    border-radius: 4px;
+    padding: 24px 26px;
+  }
+  .tab-aside-title {
+    font-family: Georgia, serif;
+    font-size: 0.78rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--blue-text);
+    margin-bottom: 16px;
+  }
+  .tab-aside ul { list-style: none; margin: 0; padding: 0; font-size: 0.88rem; }
+  .tab-aside ul li { padding: 10px 0; border-bottom: 1px solid var(--navy-mid); color: var(--silver); }
+  .tab-aside ul li:last-child { border-bottom: none; }
+  .tab-aside ul li strong { display: block; color: var(--ink); font-weight: bold; margin-bottom: 4px; }
+  .tab-aside-desc { display: block; font-size: 0.82rem; line-height: 1.5; }
+  .tab-note {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid var(--navy-light);
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 0.88rem;
+    color: var(--blue-text);
+    line-height: 1.55;
+  }
+
   /* Sobre */
   .about-grid {
     display: grid;
@@ -367,11 +477,20 @@
     margin-bottom: 10px;
     display: block;
   }
+  .card-list { list-style: none; margin: 0; padding: 0; font-size: 0.92rem; }
+  .card-list li {
+    padding: 8px 0 8px 16px;
+    border-bottom: 1px solid var(--navy-light);
+    position: relative;
+    color: var(--silver);
+  }
+  .card-list li:last-child { border-bottom: none; padding-bottom: 0; }
+  .card-list li::before { content: "—"; color: var(--blue-text); position: absolute; left: 0; }
 
   /* Serviços */
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 22px;
     margin-top: 40px;
   }
@@ -412,26 +531,15 @@
   .step h3 { font-size: 1rem; margin-bottom: 8px; }
   .step p { font-size: 0.86rem; color: var(--silver); margin: 0; }
 
-  /* Documentos + Área de atuação */
-  .split-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-top: 40px;
-  }
-  .split-col h3 {
-    font-size: 1.05rem;
-    margin-bottom: 16px;
-    padding-bottom: 10px;
+  /* Atendimento — linha única */
+  .attendance-line .wrap {
+    text-align: center;
+    border-top: 1px solid var(--navy-light);
     border-bottom: 1px solid var(--navy-light);
+    padding: 28px 24px;
   }
-  .split-col ul { list-style: none; margin: 0; padding: 0; font-size: 0.92rem; }
-  .split-col ul li {
-    padding: 10px 0 10px 20px;
-    border-bottom: 1px solid var(--navy-mid);
-    position: relative;
-  }
-  .split-col ul li::before { content: "•"; color: var(--blue-text); position: absolute; left: 0; }
+  .attendance-line p { margin: 0; font-size: 0.92rem; color: var(--silver); }
+  .attendance-line p span { color: var(--blue-text); }
 
   /* FAQ */
   .faq-item {
@@ -513,12 +621,16 @@
     .portrait-frame::after { background: linear-gradient(180deg, transparent 60%, rgba(5,14,29,0.55) 100%); }
     .hero-content h1 { font-size: 1.9rem; max-width: 100%; }
     .hero-content p.subhead { max-width: 100%; }
-    .about-grid, .card-grid, .services-grid, .steps, .split-grid { grid-template-columns: 1fr; }
+    .about-grid, .card-grid, .services-grid, .steps, .tab-panel-grid { grid-template-columns: 1fr; }
+    .tab-panel-grid { padding: 26px; gap: 26px; }
+    .audience-tabs { max-width: 100%; }
     .stats-grid { grid-template-columns: 1fr; }
     .stat { border-left: none; padding: 22px 0 0 0; margin-top: 22px; border-top: 1px solid var(--navy-light); }
     .stat:first-child { border-top: none; margin-top: 0; padding-top: 0; }
     section { padding: 60px 0; }
     .about-photo { margin-top: 8px; }
+    .whatsapp-float { width: 50px; height: 50px; right: 16px; bottom: 16px; }
+    .whatsapp-float svg { width: 25px; height: 25px; }
   }
 </style>
 </head>
@@ -538,10 +650,11 @@
     </div>
     <nav class="nav-links">
       <a href="#sobre">Sobre</a>
+      <a href="#para-quem">Para Quem</a>
       <a href="#servicos">Serviços</a>
       <a href="#como-funciona">Como Funciona</a>
-      <a href="#faq">FAQ</a>
-      <a class="btn nav-cta" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20uma%20per%C3%ADcia%20m%C3%A9dica." target="_blank" rel="noopener">Falar no WhatsApp</a>
+      <a href="#faq">Dúvidas Frequentes</a>
+      <a class="btn nav-cta btn-whatsapp" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20uma%20per%C3%ADcia%20m%C3%A9dica." target="_blank" rel="noopener">Falar no WhatsApp</a>
     </nav>
     <button class="nav-toggle" aria-label="Abrir menu">☰</button>
   </div>
@@ -560,8 +673,9 @@
       <h1>Laudos periciais com <em>precisão cirúrgica</em></h1>
       <p class="subhead">Pareceres técnicos e laudos periciais com rigor científico e documental, para advogados, magistrados, empresas e órgãos públicos — em Uberlândia e em todo o Brasil.</p>
       <div class="hero-ctas">
-        <a class="btn" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20uma%20per%C3%ADcia%20m%C3%A9dica." target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20uma%20per%C3%ADcia%20m%C3%A9dica." target="_blank" rel="noopener">Falar no WhatsApp</a>
         <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
+        <a class="btn btn-ghost" href="#para-quem">Saiba mais</a>
       </div>
       <div class="trust-strip">
         <span class="trust-item">CRM-MG 65270</span>
@@ -577,23 +691,89 @@
   </div>
 </section>
 
+<section id="para-quem">
+  <div class="wrap">
+    <div class="eyebrow" style="margin-bottom:36px;">Atendimento Especializado</div>
+
+    <div class="audience-tabs" role="tablist" aria-label="Selecione seu perfil">
+      <button type="button" class="tab-btn active" data-tab="tab-advogado" role="tab" aria-selected="true" aria-controls="tab-advogado" id="btn-advogado">Sou Advogado</button>
+      <button type="button" class="tab-btn" data-tab="tab-parte" role="tab" aria-selected="false" aria-controls="tab-parte" id="btn-parte">Sou Parte no Processo</button>
+    </div>
+
+    <div class="tab-panel active" id="tab-advogado" role="tabpanel" aria-labelledby="btn-advogado">
+      <div class="tab-panel-grid">
+        <div>
+          <h3>Fundamentação técnica para a tese do processo</h3>
+          <ul class="tab-check-list">
+            <li>Análise de viabilidade técnica</li>
+            <li>Laudo médico pericial fundamentado em evidências científicas</li>
+            <li>Quesitação estratégica alinhada à tese do processo</li>
+            <li>Avaliação de erro médico</li>
+            <li>Impugnação de laudos e pareceres</li>
+            <li>Tradução da linguagem médica para a jurídica</li>
+          </ul>
+          <a class="btn" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20assist%C3%AAncia%20t%C3%A9cnica%20para%20um%20processo." target="_blank" rel="noopener">Falar sobre o processo</a>
+        </div>
+        <div class="tab-aside">
+          <div class="tab-aside-title">Áreas de Atuação</div>
+          <ul>
+            <li><strong>Cível</strong><span class="tab-aside-desc">Danos materiais ou morais decorrentes de acidentes de trânsito, securitárias, casos de erro médico e ações de interdição ou curatela</span></li>
+            <li><strong>Trabalhista</strong><span class="tab-aside-desc">Nexo causal, LER/DORT ou perda da capacidade para o trabalho</span></li>
+            <li><strong>Previdenciário</strong><span class="tab-aside-desc">INSS</span></li>
+            <li><strong>Criminal</strong><span class="tab-aside-desc">Lesões corporais, violência sexual, causa mortis e análise de vestígios</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-parte" role="tabpanel" aria-labelledby="btn-parte" hidden>
+      <div class="tab-panel-grid">
+        <div>
+          <h3>Parecer técnico para instruir o seu processo</h3>
+          <p>Atendimento a pessoas físicas ou jurídicas que são parte em um processo judicial ou administrativo e precisam de um parecer médico fundamentado para instruir o caso.</p>
+          <ul class="tab-check-list">
+            <li>Benefício previdenciário negado</li>
+            <li>Acusação de erro médico</li>
+            <li>Perícia judicial desfavorável</li>
+            <li>Negativa de plano de saúde</li>
+            <li>Discussão de incapacidade laboral</li>
+            <li>Organização de documentação médica</li>
+            <li>Avaliação de perícias e pareceres criminais</li>
+            <li>Pareceres e laudos para fins de benefícios</li>
+          </ul>
+          <a class="btn" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20an%C3%A1lise%20do%20meu%20caso." target="_blank" rel="noopener">Solicitar análise do meu caso</a>
+        </div>
+        <div class="tab-aside">
+          <div class="tab-aside-title">O Que Você Recebe</div>
+          <ul>
+            <li>Parecer médico fundamentado</li>
+            <li>Tratamento de documentação sensível conforme a LGPD</li>
+            <li>Análise rápida e personalizada</li>
+            <li>Atendimento presencial em Uberlândia e região, remoto em todo o Brasil</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="stats-strip">
   <div class="wrap stats-grid">
     <div class="stat">
-      <span class="stat-num">2011</span>
-      <span class="stat-label">Início da trajetória em medicina legal — anterior à própria formalização como perita</span>
+      <span class="stat-num">2009–2015</span>
+      <span class="stat-label">Graduação em Medicina — UFSJ</span>
     </div>
     <div class="stat">
-      <span class="stat-num">2</span>
-      <span class="stat-label">Títulos de especialista (RQE) — Cirurgia Geral e Cirurgia do Trauma</span>
+      <span class="stat-num">2016–2018</span>
+      <span class="stat-label">Residência Médica em Cirurgia Geral — HPRB</span>
     </div>
     <div class="stat">
-      <span class="stat-num">2025</span>
-      <span class="stat-label">Chefe da Unidade de Clínica Cirúrgica — HC-UFU/HUBRASIL, desde</span>
+      <span class="stat-num">2022</span>
+      <span class="stat-label">Especialização em Cirurgia do Trauma — CBC</span>
     </div>
     <div class="stat">
-      <span class="stat-num">Prazo por escrito</span>
-      <span class="stat-label">Definido no ato de assinatura do contrato</span>
+      <span class="stat-num">2026</span>
+      <span class="stat-label">Curso de Perícias Médicas — IFH</span>
     </div>
   </div>
 </section>
@@ -612,14 +792,11 @@
       <p class="section-lede" style="max-width:100%; margin-bottom:20px;">
         A RA Consultoria Médica e Pericial presta serviços especializados em perícia médica judicial e
         assistência técnica em processos judiciais e administrativos. Laudos periciais e pareceres técnicos
-        fundamentados em evidências científicas, rigor técnico e princípios éticos da prática médica —
-        sem promessa de resultado, com compromisso de fundamentação.
+        fundamentados em evidências científicas, rigor técnico e princípios éticos da prática médica.
       </p>
       <p class="section-lede" style="max-width:100%;">
-        A responsável técnica reúne formação cirúrgica (trauma e urgência/emergência) e formação específica
-        em perícias médicas, com trajetória em medicina legal que remonta a 2011 — anterior à própria
-        formalização como perita — incluindo curso de Tanatologia Forense, participação em Jornada Acadêmica
-        de Medicina Legal e trabalhos científicos sobre investigação de lesões corporais e óbitos suspeitos.
+        Dra. Rafaela Andrade reúne formação em cirurgia geral e trauma, com trajetória em medicina legal
+        e formação específica em perícias médicas.
       </p>
       <a class="lattes-link" href="http://lattes.cnpq.br/8043422263115795" target="_blank" rel="noopener">Ver currículo completo na Plataforma Lattes →</a>
     </div>
@@ -632,8 +809,7 @@
         <div class="creds">CRM-MG 65270 · RQE Cirurgia Geral 41163 · RQE Cirurgia do Trauma 56662</div>
         <ul>
           <li>Chefe da Unidade de Clínica Cirúrgica — HC-UFU/HUBRASIL</li>
-          <li>Preceptora da Residência Médica de Cirurgia Geral — HC-UFU/UFU</li>
-          <li>Médica socorrista — SAMU/CISTRI (2019–2023), urgência e trauma em cena</li>
+          <li>Preceptora da Residência Médica de Cirurgia Geral — HC-UFU e HMMDOLC</li>
           <li>Formação complementar em Perícias Médicas — IFH</li>
         </ul>
       </div>
@@ -650,22 +826,30 @@
       <div class="card">
         <span class="num">01</span>
         <h3>Dupla base técnica</h3>
-        <p>Formação cirúrgica em trauma e urgência/emergência somada à formação específica em perícias médicas — leitura clínica e jurídica do mesmo caso.</p>
+        <p>Formação em cirurgia geral e trauma somada à formação específica em perícias médicas — leitura clínica e jurídica do mesmo caso.</p>
       </div>
       <div class="card">
         <span class="num">02</span>
-        <h3>Trajetória em medicina legal desde 2011</h3>
-        <p>Tanatologia Forense, Jornada Acadêmica de Medicina Legal e trabalhos científicos sobre investigação de lesões corporais e óbitos suspeitos — anteriores à própria formalização como perita.</p>
+        <h3>Trajetória em medicina legal</h3>
+        <ul class="card-list">
+          <li>Pós Graduação em Tanatologia</li>
+          <li>Trabalhos premiados em Jornadas de Medicina Legal</li>
+          <li>Olhar diferenciado na análise de lesões corporais e análises de vestígios</li>
+        </ul>
       </div>
       <div class="card">
         <span class="num">03</span>
-        <h3>Liderança e docência hospitalar</h3>
-        <p>Chefia de unidade cirúrgica e preceptoria de residência médica no Hospital de Clínicas de Uberlândia (HC-UFU) — rotina de fundamentar decisões técnicas para terceiros.</p>
+        <h3>Liderança e gestão hospitalar</h3>
+        <p>Atuação direta em formulação e respostas a quesitações e análises detalhadas de prontuários.</p>
       </div>
       <div class="card">
         <span class="num">04</span>
-        <h3>Rigor documental e tratamento de dados</h3>
-        <p>Laudos em formato ABNT, assinatura digital, prazo definido, e formação específica em proteção de dados pessoais (LGPD) para documentação processual sensível.</p>
+        <h3>Rigor documental e linguagem compreensível</h3>
+        <ul class="card-list">
+          <li>Laudos formatados e com assinatura digital, prazo definido na assinatura do contrato</li>
+          <li>Respeito à Lei de Proteção de Dados Pessoais (LGPD)</li>
+          <li>Tradução de terminologia médica para linguagem clara e acessível ao público geral</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -675,25 +859,19 @@
   <div class="wrap">
     <div class="eyebrow">Serviços</div>
     <h2 class="section-title">Laudos periciais e assistência técnica</h2>
-    <p class="section-lede">Escopo e prazo definidos antes do início. Condições comerciais tratadas em contato pessoal.</p>
+    <p class="section-lede">Agilidade em análises processuais e prazo definido na assinatura do contrato.</p>
     <div class="services-grid">
       <div class="service-card">
         <h3>Análise de Viabilidade Técnica</h3>
-        <p>Avaliação preliminar da documentação para verificar se o caso tem fundamento técnico-médico suficiente antes de um laudo completo.</p>
+        <p>Avaliação preliminar da documentação para verificar se o caso do reclamante tem fundamento técnico-médico.</p>
         <div class="meta">Documento PDF assinado digitalmente, formato ABNT</div>
         <a class="btn btn-ghost" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20an%C3%A1lise%20de%20viabilidade%20t%C3%A9cnica." target="_blank" rel="noopener">Consultar condições</a>
       </div>
       <div class="service-card">
-        <h3>Laudo Médico Pericial</h3>
-        <p>Análise técnica completa da documentação e demais elementos necessários à avaliação pericial, com possibilidade de perícia presencial.</p>
+        <h3>Laudo Médico / Parecer Técnico</h3>
+        <p>Análise técnica completa da documentação e demais elementos necessários à avaliação pericial e acompanhamento dos atos processuais do início ao fim.</p>
         <div class="meta">Documento PDF assinado digitalmente, formato ABNT, 5 a 15 páginas</div>
         <a class="btn btn-ghost" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20laudo%20m%C3%A9dico%20pericial." target="_blank" rel="noopener">Consultar condições</a>
-      </div>
-      <div class="service-card">
-        <h3>Pacote Análise + Laudo</h3>
-        <p>As duas etapas combinadas — análise de viabilidade seguida do laudo médico pericial completo — com condição comercial diferenciada.</p>
-        <div class="meta">Os dois documentos PDF assinados digitalmente</div>
-        <a class="btn btn-ghost" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20pacote%20an%C3%A1lise%20%2B%20laudo." target="_blank" rel="noopener">Consultar condições</a>
       </div>
     </div>
   </div>
@@ -728,23 +906,9 @@
   </div>
 </section>
 
-<section>
-  <div class="wrap split-grid">
-    <div class="split-col">
-      <h3>Documentos para Início</h3>
-      <ul>
-        <li>Autos do processo</li>
-        <li>Documento de identificação com foto</li>
-        <li>Documentos de suporte aos fatos relatados</li>
-      </ul>
-    </div>
-    <div class="split-col">
-      <h3>Atendimento</h3>
-      <ul>
-        <li>Atendimento presencial em Uberlândia e região</li>
-        <li>Atendimento remoto em todo território nacional</li>
-      </ul>
-    </div>
+<section class="attendance-line">
+  <div class="wrap">
+    <p>Atendimento presencial em Uberlândia e região <span>—</span> remoto em todo o território nacional</p>
   </div>
 </section>
 
@@ -762,20 +926,20 @@
       <p>O prazo é definido por escrito no ato da assinatura do contrato, considerando a complexidade do caso e a extensão da documentação. Há opção de urgência mediante sobretaxa, a combinar conforme o caso.</p>
     </details>
     <details class="faq-item">
-      <summary>Quais documentos preciso enviar?</summary>
-      <p>Autos do processo, documento de identificação com foto e demais documentos de suporte aos fatos relatados. A lista completa é confirmada no primeiro contato, conforme o serviço solicitado.</p>
+      <summary>Quais dados preciso enviar?</summary>
+      <p>No primeiro contato, envie nome completo, telefone, e-mail e um breve resumo do caso. A partir dessas informações, cada caso é avaliado individualmente, e a documentação específica — autos do processo, laudos, exames e demais documentos de suporte — é solicitada na sequência, conforme o serviço contratado.</p>
     </details>
     <details class="faq-item">
       <summary>O atendimento é só em Uberlândia?</summary>
-      <p>O atendimento presencial é feito em Uberlândia e região. Para o restante do território nacional, a atuação é remota, com análise da documentação e elaboração de laudos e pareceres.</p>
+      <p>O atendimento presencial é feito em Uberlândia e região. Para o restante do território nacional, a atuação é remota, com análise da documentação e elaboração de laudos e pareceres. Há possibilidade de acompanhamento da perícia presencial por outro médico ou pela própria Dra. Rafaela, com valores a combinar.</p>
     </details>
   </div>
 </section>
 
 <section class="cta-final">
   <div class="wrap">
-    <div class="slogan">Para tirar dúvidas ou solicitar um orçamento, fale diretamente pelo WhatsApp.</div>
-    <a class="btn" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20uma%20per%C3%ADcia%20m%C3%A9dica." target="_blank" rel="noopener">Falar no WhatsApp</a>
+    <div class="slogan">Para dúvidas ou orçamento</div>
+    <a class="btn btn-whatsapp" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20uma%20per%C3%ADcia%20m%C3%A9dica." target="_blank" rel="noopener">Falar no WhatsApp</a>
   </div>
 </section>
 
@@ -793,24 +957,30 @@
         <div>
           <h4>Navegação</h4>
           <a href="#sobre">Sobre</a>
+          <a href="#para-quem">Para Quem</a>
           <a href="#servicos">Serviços</a>
           <a href="#como-funciona">Como Funciona</a>
-          <a href="#faq">FAQ</a>
+          <a href="#faq">Dúvidas Frequentes</a>
         </div>
         <div>
           <h4>Contato</h4>
-          <a href="https://wa.me/5534997370255" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="https://rapericiasmedicas.com.br">rapericiasmedicas.com.br</a>
-          <a href="http://lattes.cnpq.br/8043422263115795" target="_blank" rel="noopener">Currículo Lattes</a>
+          <a href="https://wa.me/5534997370255" target="_blank" rel="noopener">WhatsApp: (34) 9 9737-0255</a>
+          <a href="mailto:rapericiasmedicas@gmail.com">Email: rapericiasmedicas@gmail.com</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Este site tem finalidade informativa institucional e não constitui consulta jurídica, atendimento médico assistencial ou garantia de resultado processual.</p>
-      <p>&copy; 2026 RA Consultoria Médica e Pericial</p>
+      <p>Todos os direitos reservados.</p>
+      <p>&copy; 2026 RA Perícias Médicas</p>
     </div>
   </div>
 </footer>
+
+<a class="whatsapp-float" href="https://wa.me/5534997370255?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20uma%20per%C3%ADcia%20m%C3%A9dica." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" fill="#F2F4F6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <path d="M16.004 3C9.377 3 4 8.373 4 15c0 2.362.687 4.564 1.875 6.417L4 29l7.762-1.845A11.94 11.94 0 0 0 16.004 27C22.63 27 28 21.627 28 15S22.63 3 16.004 3zm0 21.75c-1.91 0-3.686-.53-5.207-1.451l-.373-.222-4.607 1.095 1.127-4.49-.244-.386A9.71 9.71 0 0 1 5.25 15c0-5.936 4.818-10.75 10.754-10.75S26.75 9.064 26.75 15 21.94 24.75 16.004 24.75zm5.893-8.06c-.322-.161-1.903-.939-2.198-1.046-.295-.108-.51-.161-.724.161-.214.322-.83 1.046-1.018 1.261-.187.214-.375.241-.696.08-.322-.161-1.36-.501-2.591-1.598-.958-.854-1.605-1.909-1.793-2.231-.187-.322-.02-.496.141-.656.145-.144.322-.375.483-.563.161-.187.214-.322.322-.536.107-.214.053-.402-.027-.563-.08-.161-.724-1.744-.992-2.389-.261-.626-.526-.541-.724-.551-.187-.009-.402-.011-.617-.011s-.563.08-.858.402c-.295.322-1.126 1.1-1.126 2.683 0 1.583 1.153 3.113 1.313 3.328.161.214 2.269 3.465 5.497 4.859.768.332 1.368.53 1.835.678.771.245 1.472.211 2.027.128.618-.092 1.903-.778 2.171-1.529.268-.751.268-1.395.187-1.529-.08-.134-.295-.214-.617-.375z"/>
+  </svg>
+</a>
 
 <script>
   // Menu mobile
@@ -826,6 +996,26 @@
     links.style.background = '#0D1B2A';
     links.style.padding = '20px 24px';
     links.style.borderBottom = '1px solid #1E3A52';
+  });
+
+  // Tabs "Para quem"
+  document.querySelectorAll('.audience-tabs .tab-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = btn.getAttribute('data-tab');
+      document.querySelectorAll('.audience-tabs .tab-btn').forEach(function (b) {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      document.querySelectorAll('.tab-panel').forEach(function (p) {
+        p.classList.remove('active');
+        p.hidden = true;
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      var panel = document.getElementById(target);
+      panel.classList.add('active');
+      panel.hidden = false;
+    });
   });
 </script>
 
