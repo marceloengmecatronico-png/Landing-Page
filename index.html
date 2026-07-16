@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 
 <!-- Google tag (gtag.js) — GA4, instalado em 2026-07-10, ID de medição G-M9Q50373J0. Não remover/duplicar; se adicionar Google Ads ou GTM no futuro, reutilizar este mesmo bloco gtag.js e apenas incluir uma nova chamada gtag('config', ...). -->
+<link rel="preconnect" href="https://www.googletagmanager.com">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M9Q50373J0"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -513,33 +514,66 @@
   .service-card .btn-ghost { align-self: flex-start; font-size: 0.82rem; padding: 10px 18px; }
 
   /* Como funciona */
+  .steps-head { text-align: center; max-width: 620px; margin: 0 auto 52px auto; }
+  .section-badge {
+    display: inline-flex;
+    align-items: center;
+    font-family: Georgia, serif;
+    font-size: 0.78rem;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--blue-text);
+    border: 1px solid var(--navy-light);
+    background: var(--navy-mid);
+    padding: 9px 20px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .steps-head .section-title { margin-bottom: 12px; }
+  .steps-head .section-title::after {
+    content: "";
+    display: block;
+    width: 46px;
+    height: 2px;
+    background: var(--blue);
+    margin: 16px auto 0 auto;
+  }
+  .steps-head .section-lede { max-width: 460px; margin: 18px auto 0 auto; }
   .steps {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 22px;
-    margin-top: 40px;
-    counter-reset: step;
+    position: relative;
   }
-  .step { position: relative; padding-left: 4px; }
+  .steps::before {
+    content: "";
+    position: absolute;
+    top: 29px;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: var(--navy-light);
+    z-index: 0;
+  }
+  .step { position: relative; z-index: 1; text-align: center; }
   .step .step-num {
+    position: relative;
+    z-index: 1;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: var(--ink);
     font-family: Georgia, serif;
-    font-size: 2.2rem;
-    color: var(--navy-light);
-    display: block;
-    margin-bottom: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px auto;
   }
   .step h3 { font-size: 1rem; margin-bottom: 8px; }
   .step p { font-size: 0.86rem; color: var(--silver); margin: 0; }
-
-  /* Atendimento — linha única */
-  .attendance-line .wrap {
-    text-align: center;
-    border-top: 1px solid var(--navy-light);
-    border-bottom: 1px solid var(--navy-light);
-    padding: 28px 24px;
-  }
-  .attendance-line p { margin: 0; font-size: 0.92rem; color: var(--silver); }
-  .attendance-line p span { color: var(--blue-text); }
 
   /* FAQ */
   .faq-item {
@@ -631,6 +665,8 @@
     .about-photo { margin-top: 8px; }
     .whatsapp-float { width: 50px; height: 50px; right: 16px; bottom: 16px; }
     .whatsapp-float svg { width: 25px; height: 25px; }
+    .steps::before { display: none; }
+    .step { padding-bottom: 8px; }
   }
 </style>
 </head>
@@ -685,7 +721,7 @@
     </div>
     <div class="hero-portrait">
       <div class="portrait-frame">
-        <img src="assets/foto-rafaela-hero.jpg" alt="Dra. Rafaela Andrade Nascimento, médica responsável técnica da RA Consultoria Médica e Pericial">
+        <img src="assets/foto-rafaela-hero.jpg" alt="Dra. Rafaela Andrade Nascimento, médica responsável técnica da RA Consultoria Médica e Pericial" fetchpriority="high" decoding="async">
       </div>
     </div>
   </div>
@@ -802,7 +838,7 @@
     </div>
     <div class="about-photo">
       <div class="about-photo-frame">
-        <img src="assets/foto-rafaela-sobre.jpg" alt="Dra. Rafaela Andrade Nascimento, responsável técnica da RA Consultoria Médica e Pericial">
+        <img src="assets/foto-rafaela-sobre.jpg" alt="Dra. Rafaela Andrade Nascimento, responsável técnica da RA Consultoria Médica e Pericial" loading="lazy" decoding="async">
       </div>
       <div class="about-caption-card">
         <div class="name">Dra. Rafaela Andrade Nascimento</div>
@@ -879,36 +915,38 @@
 
 <section id="como-funciona" style="background:var(--navy-edge);">
   <div class="wrap">
-    <div class="eyebrow">Como Funciona</div>
-    <h2 class="section-title">Do primeiro contato à entrega do laudo</h2>
+    <div class="steps-head">
+      <div class="section-badge">Como Funciona</div>
+      <h2 class="section-title">Do primeiro contato à entrega do laudo</h2>
+      <p class="section-lede">5 etapas, com prazo definido por escrito.</p>
+    </div>
     <div class="steps">
       <div class="step">
         <span class="step-num">01</span>
-        <h3>Documentação</h3>
-        <p>Envio dos autos do processo e documentos de suporte via WhatsApp ou e-mail.</p>
+        <h3>Envio do caso</h3>
+        <p>Documentação enviada por WhatsApp ou e-mail.</p>
       </div>
       <div class="step">
         <span class="step-num">02</span>
         <h3>Análise técnica</h3>
-        <p>Avaliação da documentação e, quando necessário, agendamento de perícia presencial.</p>
+        <p>Avaliação da documentação e, se necessário, agendamento de perícia presencial.</p>
       </div>
       <div class="step">
         <span class="step-num">03</span>
-        <h3>Elaboração</h3>
-        <p>Redação do laudo ou parecer, fundamentado em evidências científicas e formato ABNT.</p>
+        <h3>Estratégia pericial</h3>
+        <p>Definição da abordagem técnica mais adequada ao caso.</p>
       </div>
       <div class="step">
         <span class="step-num">04</span>
-        <h3>Entrega</h3>
-        <p>Documento assinado digitalmente, dentro do prazo definido por escrito no ato da assinatura do contrato.</p>
+        <h3>Elaboração</h3>
+        <p>Redação do laudo ou parecer, fundamentado em evidências científicas.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">05</span>
+        <h3>Acompanhamento</h3>
+        <p>Entrega do documento e acompanhamento dos atos processuais, dentro do prazo combinado.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="attendance-line">
-  <div class="wrap">
-    <p>Atendimento presencial em Uberlândia e região <span>—</span> remoto em todo o território nacional</p>
   </div>
 </section>
 
